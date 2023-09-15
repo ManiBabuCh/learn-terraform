@@ -1,40 +1,5 @@
-variable "course" {
-  default = "DevOps Training"
-}
+variable "env" {}
 
-# List
-variable "courses" {
-  default = [
-    "DevOps",
-    "AWS",
-    "Python"
-  ]
-}
-
-## Map
-variable "course_details" {
-  default = {
-    DevOps = {
-      name     = "DevOps"
-      timing   = "10am"
-      duration = 90
-    }
-    AWS = {
-      name     = "AWS"
-      timing   = "11am"
-      duration = 30
-    }
-  }
-}
-
-output "course" {
-  value = var.course
-}
-
-output "courses" {
-  value = var.courses[2]
-}
-
-output "course_details" {
-  value = var.course_details["AWS"]
+output "env" {
+  value = var.env
 }
