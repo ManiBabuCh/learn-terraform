@@ -1,3 +1,8 @@
+variable "value"{
+default = 100
+}
+
+
 output "sample"{
-value = "Hello worls"
+value = "Hello worls is ${var.value}"
 }
