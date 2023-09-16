@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "sample"
   }
 }
 
@@ -18,17 +18,17 @@ data "aws_ami" "example" {
 }
 
 
-resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
+resource "aws_security_group" "sg" {
+  name        = "sample"
   description = "Allow TLS inbound traffic"
-  vpc_id      = aws_vpc.main.id
+
 
   ingress {
-    description      = "TLS from VPC"
+    description      = "SSH"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = [0.0.0.0/0]
+    cidr_blocks      = ["0.0.0.0/0"]
 
   }
 
@@ -41,6 +41,6 @@ resource "aws_security_group" "allow_tls" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "sample"
   }
 }
