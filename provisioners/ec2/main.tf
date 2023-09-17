@@ -16,7 +16,7 @@ resource "aws_instance" "web" {
 
     provisioner "remote-exec" {
       inline = [
-        "sudo labauto",
+        "sudo labauto ansible",
         "ansible-pull -i localhost, -U https://github.com/ManiBabuCh/learn-ansible.git rmain.yml -e env=dev -e role_name=frontend",
       ]
     }
@@ -63,9 +63,6 @@ resource "aws_security_group" "sg" {
 
 variable "name"{}
 
-output "ppublic_ip" {
-  value = aws_instance.web.public_ip
-}
 
 
 
