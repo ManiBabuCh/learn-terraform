@@ -6,3 +6,6 @@ module "instance2"{
 source ="./ec2"
 name = "instance2"
 }
+output "public_ip" {
+  value = aws_instance.web.public_ip
+}
