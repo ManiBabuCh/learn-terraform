@@ -6,3 +6,4 @@ module "instance2"{
 source ="./ec2"
 name = "instance2"
 }
+variable "name"{}
