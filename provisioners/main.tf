@@ -1,4 +1,4 @@
-module "instance1"{
+module "frontend"{
 source ="./ec2"
 name = "frontend"
 }
