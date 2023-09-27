@@ -46,7 +46,8 @@ resource "aws_security_group" "sg" {
 }
 
 variable "name"{}
-
+# taking name variable from root module
 output "ppublic_ip" {
   value = aws_instance.web.public_ip
 }
+# prints output of a sub module to root module
