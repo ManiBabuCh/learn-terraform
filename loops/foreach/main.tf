@@ -20,12 +20,12 @@ variable "instances" {
   default = {
 
     catalogue = {
-      name = catalogueeee
+      name = "catalogueee"
       instance_type = "t3.nano"
     }
 
     frontend={
-      name = frontendddd
+      name = "frontendddd"
     }
   }
 }
