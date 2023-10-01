@@ -7,7 +7,6 @@ resource "aws_instance" "web" {
   }
 }
 
-
 data "aws_ami" "example" {
 
   most_recent      = true
@@ -29,7 +28,6 @@ resource "aws_security_group" "allow_tls" {
     to_port          = 22
     protocol         = "tcp"
     cidr_blocks      = [0.0.0.0/0]
-
   }
 
   egress {

@@ -7,6 +7,7 @@ resource "aws_instance" "web" {
   }
     # Establishes connection to be used by all
     # generic remote provisioners (i.e. file/remote-exec)
+    # this connection is useful to connect to the server
     connection {
       type     = "ssh"
       user     = "centos"
