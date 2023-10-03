@@ -22,7 +22,7 @@ resource "null_resource" "ansible" {
 
     inline = [
       "sudo labauto ansible",
-      "ansible-pull -i localhost, -U https://github.com/ManiBabuCh/roboshop-ansible/blob/main/rmain.yml -e env=dev -e role_name=${var.name}"
+      "ansible-pull -i localhost, -U https://github.com/ManiBabuCh/roboshop-ansible rmain.yml -e env=dev -e role_name=${var.name}"
     ]
   }
 }
